@@ -32,7 +32,7 @@ for device in devices:
             .strip()
         )
         ports = [
-            (tmp[0], tmp[1]) for port in output.splitlines() if (tmp := port.split())
+            (tmp[0], tmp[2]) for port in output.splitlines() if (tmp := port.split())
         ]
         devices_ports.update({device[0]: ports})
     except KeyboardInterrupt as e:
