@@ -185,10 +185,10 @@ class StatsReports:
         total_time = pd.Timedelta(0)
         for _, row in self.df.iterrows():
             total_time += row["Duration"] * row["Play Count"]
-        return f"Total time: {total_time}"
+        return f"{total_time}"
 
     def total_play_count(self) -> str:
-        return f"Total play count: {self.df['Play Count'].sum()}"
+        return f"{self.df['Play Count'].sum()} plays"
 
 
 if __name__ == "__main__":
